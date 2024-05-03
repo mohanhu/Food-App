@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_navgraph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.dpfoodapp.ui.view.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_mealInstructionFragment2"
+            app:destination="@id/mealInstructionFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_categoryDescList2"
+            app:destination="@id/categoryDescList2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealInstructionFragment2"
+        android:name="com.example.dpfoodapp.ui.view.fragment.MealInstructionFragment"
+        android:label="MealInstructionFragment" />
+    <fragment
+        android:id="@+id/categoryDescList2"
+        android:name="com.example.dpfoodapp.ui.view.fragment.CategoryDescList"
+        android:label="CategoryDescList" >
+        <action
+            android:id="@+id/action_categoryDescList2_to_mealInstructionFragment2"
+            app:destination="@id/mealInstructionFragment2" />
+    </fragment>
+</navigation>

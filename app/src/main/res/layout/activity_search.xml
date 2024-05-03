@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.main.SearchActivity">
+
+    <EditText
+        android:id="@+id/searchname"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/searchback"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:hint="@string/search_here"
+        android:inputType="textVisiblePassword|textNoSuggestions"
+        android:paddingStart="10dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="13dp"
+        android:textColorHint="@color/lightgrey"
+        android:shadowColor="@color/white"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHighlight="#00000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:indeterminate="true"
+        android:maxHeight="20dip"
+        android:minHeight="0dip"
+        android:visibility="gone"
+        app:indicatorColor="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchname"
+        app:trackThickness="1dp" />
+
+    <TextView
+        android:id="@+id/homeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/myfont"
+        android:text="@string/history"
+        android:textColor="@color/red"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/searchname"
+        app:layout_constraintTop_toBottomOf="@+id/searchname" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading_gif_meals"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_230sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/soccer_lottie" />
+
+    <ImageView
+        android:id="@+id/placeholder"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/data_disconnect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/soccer_lottie" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_180sdp"
+        android:layoutAnimation="@anim/layoutcategoryanim"
+        android:transitionName="search_img_trans"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:layoutAnimation="@anim/layoutcategoryanim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
