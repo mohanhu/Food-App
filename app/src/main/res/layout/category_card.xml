@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    app:cardCornerRadius="9dp"
+    android:layout_margin="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/img_category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:src="@drawable/loading_gif"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:id="@+id/tvCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:singleLine="true"
+            app:layout_constraintTop_toBottomOf="@+id/img_category"
+            app:layout_constraintStart_toStartOf="@id/img_category"
+            app:layout_constraintEnd_toEndOf="@+id/img_category"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_11sdp"
+            android:layout_marginRight="@dimen/_11sdp"
+            android:text="fast food"
+            android:textColor="#232323"
+            android:fontFamily="@font/myfont"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

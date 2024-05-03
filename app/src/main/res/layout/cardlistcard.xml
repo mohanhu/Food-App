@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="9dp"
+    android:layout_margin="@dimen/_10sdp"
+    android:id="@+id/card"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_fav_meal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loading_gif"
+            android:layout_margin="@dimen/_14sdp"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:id="@+id/tv_fav_meal_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:lineSpacingExtra="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/img_fav_meal"
+            app:layout_constraintStart_toStartOf="@+id/img_fav_meal" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

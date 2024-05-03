@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/favourite_navgraph"
+    app:startDestination="@id/favoriteFragment">
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.dpfoodapp.ui.view.fragment.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_mealInstructionFragment3"
+            app:destination="@id/mealInstructionFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealInstructionFragment3"
+        android:name="com.example.dpfoodapp.ui.view.fragment.MealInstructionFragment"
+        android:label="MealInstructionFragment" />
+
+</navigation>
